@@ -11,8 +11,8 @@
 
 ashape2poly <- function(ashape){
   # Convert node numbers into characters
-  ashape$ashape.obj$edges[,1] <- as.character(ashape$ashape.obj$edges[,1])
-  ashape_graph <- graph_from_edgelist(ashape$ashape.obj$edges[,1:2], directed = FALSE)
+  ashape$edges[,1] <- as.character(ashape$edges[,1])
+  ashape_graph <- graph_from_edgelist(ashape$edges[,1:2], directed = FALSE)
   if (!is.connected(ashape_graph)) {
     stop("Graph not connected")
   }
