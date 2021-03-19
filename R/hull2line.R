@@ -36,7 +36,7 @@ ahull2lines <- function(hull){
     if(i == 1){
       # Add the first line to the list of lines
       lines[[i]] <- line_i
-    } else if(all.equal(line_i@coords[1,], last_line_coords[nrow(last_line_coords),])){
+    } else if(isTRUE(all.equal(line_i@coords[1,], last_line_coords[nrow(last_line_coords),]))){
       # If the first coordinate in the ith line is equal to the last coordinate in the previous line
       # then those lines should be connected
       # Row bind the coordinates for the ith line to the coordinates of the previous line in the list
