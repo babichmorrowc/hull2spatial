@@ -8,8 +8,7 @@
 #' @return The Line object that approximates the given arc
 #' @export
 #' @examples
-#' add(1, 1)
-#' add(10, 1)
+#' arc2line(center = c(0.5, -0.1), r = 0.2, vector = c(0.1, 1), theta = 0.04)
 
 arc2line <- function(center, r, vector, theta, npoints = 100) {
   # Get the angles at the extremes of the arcs
@@ -31,8 +30,11 @@ arc2line <- function(center, r, vector, theta, npoints = 100) {
 #' @return The SpatialLines object
 #' @export
 #' @examples
-#' add(1, 1)
-#' add(10, 1)
+#' library(alphahull)
+#' set.seed(123)
+#' x <- matrix(runif(100), nc = 2)
+#' ahull_02 <- ahull(x, alpha = 0.2)
+#' ahull_line_02 <- ahull2lines(ahull_02)
 
 # Function to convert alpha hulls into SpatialLines
 ahull2lines <- function(hull){

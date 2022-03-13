@@ -1,14 +1,13 @@
-#' Convert an alpha shape object to a polygon.
+#' Convert an alpha shape object to a polygon. Modified from https://rpubs.com/geospacedman/alphasimple.
 #'
 #' @param ashape An alpha shape object.
 #' @return The polygon matching the boundaries of the alpha shape.
 #' @export
 #' @examples
-#' add(1, 1)
-#' add(10, 1)
-
-# Function to convert alpha shape to a polygon
-# Modified from https://rpubs.com/geospacedman/alphasimple
+#' set.seed(123)
+#' x <- matrix(runif(100), nc = 2)
+#' ashape_02 <- ashape(x, alpha = 0.2)
+#' ashape2poly(ashape_02)
 
 ashape2poly <- function(ashape){
   # Convert node numbers into characters
