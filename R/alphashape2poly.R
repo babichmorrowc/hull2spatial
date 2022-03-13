@@ -7,7 +7,7 @@
 #' set.seed(123)
 #' x <- matrix(runif(100), nc = 2)
 #' ashape_02 <- ashape(x, alpha = 0.2)
-#' ashape2poly(ashape_02)
+#' poly_result <- ashape2poly(ashape_02)
 
 ashape2poly <- function(ashape){
   # Convert node numbers into characters
@@ -25,11 +25,16 @@ ashape2poly <- function(ashape){
   # Delete one edge to create a chain
   cut_graph <- ashape_graph - E(ashape_graph)[1]
   # Find chain end points
-  ends = names(which(degree(cut_graph) == 1))
-  path = get.shortest.paths(cut_graph, ends[1], ends[2])$vpath[[1]]
+  ends <- names(which(degree(cut_graph) == 1))
+  path <- get.shortest.paths(cut_graph, ends[1], ends[2])$vpath[[1]]
   # this is an index into the points
-  pathX = as.numeric(V(ashape_graph)[path]$name)
+  pathX <- as.numeric(V(ashape_graph)[path]$name)
   # join the ends
-  pathX = c(pathX, pathX[1])
-  return(pathX)
+  pathX <- c(pathX, pathX[1])
+  # Subset the coordinates of points by pathX
+  coords_subset <- ashape$x[pathX, ]
+  p <- Polygon(coords_subset)
+  ps <- Polygons(list(p),1)
+  spatial_ps <- SpatialPolygons(list(ps))
+  return(spatial_ps)
 }
