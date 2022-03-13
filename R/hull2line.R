@@ -25,6 +25,14 @@ arc2line <- function(center, r, vector, theta, npoints = 100) {
   return(line)
 }
 
+#' Convert alpha hulls into SpatialLines
+#'
+#' @param hull Alpha hull
+#' @return The SpatialLines object
+#' @export
+#' @examples
+#' add(1, 1)
+#' add(10, 1)
 
 # Function to convert alpha hulls into SpatialLines
 ahull2lines <- function(hull){
