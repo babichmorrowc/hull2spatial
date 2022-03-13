@@ -16,4 +16,6 @@ Imports:
   sp,
   igraph,
   methods
+Depends:
+  sp
 RoxygenNote: 6.1.1
