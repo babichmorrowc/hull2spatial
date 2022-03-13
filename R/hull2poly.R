@@ -26,7 +26,15 @@ spLines2poly <- function(sp_lines){
   return(sp_polys)
 }
 
-# Function to convert alpha hull into SpatialPolygon
+#' Convert alpha hull to SpatialPolygon
+#'
+#' @param hull The alpha hull object
+#' @return The SpatialPolygon object created by that alpha hull
+#' @export
+#' @examples
+#' add(1, 1)
+#' add(10, 1)
+
 ahull2poly <- function(hull){
   # Convert the alpha hull to SpatialLines
   hull2SpatialLines <- ahull2lines(hull)
