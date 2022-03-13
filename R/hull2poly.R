@@ -1,4 +1,12 @@
-# Function to convert SpatialLines to SpatialPolygon
+#' Convert SpatialLines to SpatialPolygon
+#'
+#' @param sp_lines The SpatialLines object
+#' @return The SpatialPolygon object created by those lines
+#' @export
+#' @examples
+#' add(1, 1)
+#' add(10, 1)
+
 spLines2poly <- function(sp_lines){
   # Extract the lines slot
   lines_slot <- sp_lines@lines[[1]]

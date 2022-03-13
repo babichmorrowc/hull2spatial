@@ -2,6 +2,7 @@
 #'
 #' @param ashape An alpha shape object.
 #' @return The polygon matching the boundaries of the alpha shape.
+#' @export
 #' @examples
 #' add(1, 1)
 #' add(10, 1)

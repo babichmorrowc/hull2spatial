@@ -1,5 +1,16 @@
-# Function to convert an arc into line segments
-# Given the center of the arc, the radius, the vector, and the angle (radians)
+#' Convert an arc into line segments given the center of the arc, the radius, the vector, and the angle (radians)
+#'
+#' @param center The coordinates of the center
+#' @param r The radius of the arc
+#' @param vector The vector of the arc
+#' @param theta The angle of the arc in radians
+#' @param npoints Number of points along the arc
+#' @return The Line object that approximates the given arc
+#' @export
+#' @examples
+#' add(1, 1)
+#' add(10, 1)
+
 arc2line <- function(center, r, vector, theta, npoints = 100) {
   # Get the angles at the extremes of the arcs
   angles <- anglesArc(vector, theta)
