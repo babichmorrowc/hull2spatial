@@ -4,8 +4,6 @@
 #' @return The SpatialPolygon object created by those lines
 #' @export
 #' @examples
-#' add(1, 1)
-#' add(10, 1)
 
 spLines2poly <- function(sp_lines){
   # Extract the lines slot
