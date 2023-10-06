@@ -8,7 +8,7 @@ Description: Converts alpha hull objects (`alphahull`) into Spatial* objects for
     `sp` package. It allows arcs to be converted into line segments, which can then
     be used to create SpatialLines and SpatialPolygons objects. This process allows 
     alpha hulls to be used in mapping processes in R.
-License: What license is it under?
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Imports:
