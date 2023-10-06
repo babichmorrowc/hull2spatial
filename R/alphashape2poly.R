@@ -6,7 +6,7 @@
 #' @examples
 #' set.seed(123)
 #' x <- matrix(runif(100), nc = 2)
-#' ashape_02 <- ashape(x, alpha = 0.2)
+#' ashape_02 <- alphahull::ashape(x, alpha = 0.2)
 #' poly_result <- ashape2poly(ashape_02)
 
 ashape2poly <- function(ashape){
