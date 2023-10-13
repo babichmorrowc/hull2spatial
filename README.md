@@ -1,6 +1,7 @@
 <!-- badges: start -->
   [![R-CMD-check](https://github.com/babichmorrowc/hull2spatial/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/babichmorrowc/hull2spatial/actions/workflows/R-CMD-check.yaml)
-  <!-- badges: end -->
+[![R-CMD-check](https://github.com/babichmorrowc/hull2spatial/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/babichmorrowc/hull2spatial/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
 
 This package converts objects from the `alphahull` R package into objects that are compatible with the `sp` package for spatial data.
 
