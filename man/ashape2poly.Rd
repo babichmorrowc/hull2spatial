@@ -2,7 +2,7 @@
 % Please edit documentation in R/alphashape2poly.R
 \name{ashape2poly}
 \alias{ashape2poly}
-\title{Convert an alpha shape object to a polygon.}
+\title{Convert an alpha shape object to a polygon. Modified from https://rpubs.com/geospacedman/alphasimple.}
 \usage{
 ashape2poly(ashape)
 }
@@ -13,9 +13,11 @@ ashape2poly(ashape)
 The polygon matching the boundaries of the alpha shape.
 }
 \description{
-Convert an alpha shape object to a polygon.
+Convert an alpha shape object to a polygon. Modified from https://rpubs.com/geospacedman/alphasimple.
 }
 \examples{
-add(1, 1)
-add(10, 1)
+set.seed(123)
+x <- matrix(runif(100), nc = 2)
+ashape_02 <- alphahull::ashape(x, alpha = 0.2)
+poly_result <- ashape2poly(ashape_02)
 }

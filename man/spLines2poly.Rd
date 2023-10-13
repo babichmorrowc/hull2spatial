@@ -15,7 +15,3 @@ The SpatialPolygon object created by those lines
 \description{
 Convert SpatialLines to SpatialPolygon
 }
-\examples{
-add(1, 1)
-add(10, 1)
-}

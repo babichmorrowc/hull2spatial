@@ -24,6 +24,5 @@ The Line object that approximates the given arc
 Convert an arc into line segments given the center of the arc, the radius, the vector, and the angle (radians)
 }
 \examples{
-add(1, 1)
-add(10, 1)
+arc2line(center = c(0.5, -0.1), r = 0.2, vector = c(0.1, 1), theta = 0.04)
 }
