@@ -20,7 +20,7 @@ arc2line <- function(center, r, vector, theta, npoints = 100) {
   # Generate y coordinates for points along the arc
   y <- center[2] + r * sin(seqang)
   coords.xy <- cbind(x,y)
-  line <- Line(coords = coords.xy)
+  line <- sp::Line(coords = coords.xy)
   return(line)
 }
 
@@ -70,9 +70,9 @@ ahull2lines <- function(hull){
     }
   }
   # Convert the list of lines to a Line object
-  lines <- Lines(lines, ID = 'l')
+  lines <- sp::Lines(lines, ID = 'l')
   # Convert the Line object to a SpatialLines object
-  sp_lines <- SpatialLines(list(lines))
+  sp_lines <- sp::SpatialLines(list(lines))
   return(sp_lines)
 }
 

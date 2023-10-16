@@ -33,8 +33,8 @@ ashape2poly <- function(ashape){
   pathX <- c(pathX, pathX[1])
   # Subset the coordinates of points by pathX
   coords_subset <- ashape$x[pathX, ]
-  p <- Polygon(coords_subset)
-  ps <- Polygons(list(p),1)
-  spatial_ps <- SpatialPolygons(list(ps))
+  p <- sp::Polygon(coords_subset)
+  ps <- sp::Polygons(list(p),1)
+  spatial_ps <- sp::SpatialPolygons(list(ps))
   return(spatial_ps)
 }

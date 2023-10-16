@@ -19,9 +19,9 @@ Convert alpha hull to SpatialPolygon
 data(iris)
 iris_sepals <- iris[,1:2]
 iris_sepals <- iris_sepals[!duplicated(paste(iris_sepals$Sepal.Length, iris_sepals$Sepal.Width)), ]
-alphahull_1 <- ahull(iris_sepals, alpha = 1)
+alphahull_1 <- alphahull::ahull(iris_sepals, alpha = 1)
 hullpoly_1 <- ahull2poly(alphahull_1)
 plot(iris_sepals, pch = 19, col = "darkseagreen")
 plot(alphahull_1, lwd = 5, col = "gray", add = TRUE)
-plot(hullpoly_1, border = "magenta", add = TRUE)
+sp:::plot.SpatialPolygons(hullpoly_1, border = "magenta", add = TRUE)
 }
