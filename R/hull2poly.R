@@ -7,16 +7,6 @@
 spLines2poly <- function(sp_lines){
   # Extract the lines slot
   lines_slot <- sp_lines@lines[[1]]
-  # # Create a list of booleans indicating whether a given Line represents a polygon
-  # poly_bool <- sapply(lines_slot@Lines, function(x){
-  #   coords <- lines_slot@Lines[[1]]@coords
-  #   # coords <- x@coords
-  #   # Check if the first coordinate in the line is the same as the last
-  #   all.equal(coords[1,], coords[nrow(coords),])
-  # })
-  # # Pull out the lines that form polygons
-  # poly_lines <- sp_lines[poly_bool]
-  # poly_lines_slot <- poly_lines@lines
   # Create SpatialPolygons
   sp_polys <- sp::SpatialPolygons(list(sp::Polygons(lapply(lines_slot@Lines, function(x) {
     sp::Polygon(methods::slot(x, "coords"))
